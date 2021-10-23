@@ -13,13 +13,7 @@ public class YahooAndPracticeVerification {
 2. Go to https://www.yahoo.com/
 3. Verify title:
 Expected: Yahoo
-TC #2: Cybertek practice tool verifications
-1. Open Chrome browser
-2. Go to https://practice.cybertekschool.com/
-3. Verify URL contains
-Expected: cybertekschool
-4. Verify title:
- Expected: Practice
+
          */
         WebDriverManager.chromedriver().setup();
         String url = "https://www.yahoo.com/";
