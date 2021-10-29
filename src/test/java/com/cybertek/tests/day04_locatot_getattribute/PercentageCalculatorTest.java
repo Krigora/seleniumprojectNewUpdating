@@ -53,6 +53,12 @@ public class PercentageCalculatorTest {
         String result =  driver.findElement(By.className("h2result")).getText();
         System.out.println("result = " + result) ;
 
+        if (result.endsWith("24000")){
+            System.out.println("PASS: Calculation is correct");
+        } else {
+            System.out.println("FAIL: Calculation is incorrect");
+        }
+
        driver.quit();
 
     }
