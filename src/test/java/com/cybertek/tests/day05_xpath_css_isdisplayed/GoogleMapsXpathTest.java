@@ -27,5 +27,7 @@ public class GoogleMapsXpathTest {
         WebElement startingAddressField =   driver.findElement(By.xpath("/input[@placeholder = 'Choose starting point, or click on the map...']"));
         startingAddressField.sendKeys("Charlot, NC" + Keys.ENTER);
 
+        driver.quit();
+
     }
 }
