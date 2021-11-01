@@ -18,15 +18,18 @@ public class GoogleMapsXpathTest {
         addressField.sendKeys("cybertek chicago" + Keys.ENTER);
 
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         //click on directions
         WebElement directions = driver.findElement(By.xpath("/html/body/div[3]/div[9]/div[8]/div/div[1]/div/div/div[4]/div[1]/button/span/img"));
         directions.click();
 
+        Thread.sleep(2000);
+
+        //<input autocomplete="off" class="tactile-searchbox-input" aria-autocomplete="list" aria-controls="sbsg50" dir="ltr" spellcheck="false" style="border: none; padding: 0px; margin: 0px; height: auto; width: 100%; outline: none;" aria-label="Choose starting point, or click on the map..." placeholder="Choose starting point, or click on the map...">
 
         WebElement startingAddressField = driver.findElement(By.xpath("//input[@placeholder='Choose starting point, or click on the map...']"));
-        startingAddressField.sendKeys("8104 amethyst dr, Mclean VA" + Keys.ENTER);
+        startingAddressField.sendKeys("Chicago, IL" + Keys.ENTER);
 
         driver.quit();
 
