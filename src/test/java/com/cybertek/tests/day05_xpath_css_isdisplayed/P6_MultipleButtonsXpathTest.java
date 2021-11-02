@@ -34,7 +34,8 @@ USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
         //Locate button2 using xpat and check if it is currently displayed on the page,
         // then click on
         //<button class="btn btn-primary" onclick="button2()" name="button2">Button 2</button>
-        WebElement button2 = driver.findElement(By.xpath("//button[text()='button 2()']")); //or ("//button[.='Button2']"));
+
+        WebElement button2 = driver.findElement(By.xpath("//button[text()='Button 2']")); //or ("//button[.='Button2']"));
 
         if (button2.isDisplayed()){
             System.out.println("PASS: Button2 is displayed");

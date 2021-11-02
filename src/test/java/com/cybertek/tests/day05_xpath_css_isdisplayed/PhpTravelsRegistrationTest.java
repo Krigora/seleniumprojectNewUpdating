@@ -35,9 +35,26 @@ public class PhpTravelsRegistrationTest {
         password.sendKeys("QWErty123");
 
         //<button type="submit" class="btn btn-default btn-lg btn-block effect ladda-button waves-effect" data-style="zoom-in"><span class="ladda-label">Signup</span><span class="ladda-spinner"></span></button>
-Thread.sleep(2000);
+         Thread.sleep(2000);
 
         WebElement signup = driver.findElement(By.xpath("//button[.='Signup']"));
         signup.click();
+
+        //<p class="font-size-14">Please enter your account credentials below</p>
+
+
+        WebElement email1 = driver.findElement(By.name("email"));
+        email.sendKeys("Ihor.kryvynskyy@gmail.com");
+
+        WebElement password1 = driver.findElement(By.name("password"));
+        password.sendKeys("QWErty123");
+
+        //<button type="submit" class="btn btn-default btn-lg btn-block effect ladda-button waves-effect" data-style="zoom-in"><span class="ladda-label">Login</span><span class="ladda-spinner"></span></button>
+
+        WebElement login = driver.findElement(By.xpath("//button[.='Login']"));
+        login.click();
+
+
+
     }
 }
