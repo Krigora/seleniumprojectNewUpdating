@@ -41,7 +41,7 @@ public class P3_AmazonCSSPractice {
          */
 
         //clear the search input box then search for "iphone 13 wooden case"
-        //searchField.clear();
+
 searchField = driver.findElement(By.cssSelector("input[name ='field-keywords']"));
 searchButton = driver.findElement(By.cssSelector("input[id='nav-search-submit-button']"));
 
