@@ -24,6 +24,14 @@ public class FogotPassword_CSS_Test {
 
         emailField.sendKeys("student2@gmail.com");
 
+        //loop
+
+        for (int i = 3; i < 10; i++){
+            Thread.sleep(1234);
+            emailField.clear(); // clear and make empty
+            emailField.sendKeys("student" + i + "@gmail.com");
+        }
+
 
 
     }
