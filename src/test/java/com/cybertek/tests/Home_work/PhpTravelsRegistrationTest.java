@@ -1,4 +1,4 @@
-package com.cybertek.tests.day05_xpath_css_isdisplayed;
+package com.cybertek.tests.Home_work;
 
 import com.cybertek.utils.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -112,7 +112,7 @@ WebElement containsText = driver.findElement(By.xpath("//html/body/section[1]/di
             System.out.println("FAIL: Verification on valid");
         }
 
-
+driver.quit();
 
     }
 }
