@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class FogotPasswordFindElements {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         String appUrl = "http://practice.cybertekschool.com/forgot_password";
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -27,6 +27,25 @@ public class FogotPasswordFindElements {
 
         // print text of second one
         System.out.println("first link = " + links.get(1).getText());
+
+
+        //loop and print href value of each one
+        // iter -> enter or tab
+
+        for (WebElement link : links) {
+            System.out.println(link.getAttribute("href"));
+
+        }
+        Thread.sleep(5000);
+// click on Home link at index 1
+        //<a class="nav-link" href="/">Home</a>
+
+        links.get(1).click();
+
+        Thread.sleep(3000);
+
+        driver.quit();
+
 
     }
 }
