@@ -47,10 +47,24 @@ Hint: Need to use findElements method.
         }
 
         // 5. Click to ALL “Delete” buttons to delete them.
-    //   for (WebElement deleteButton : deleteButtons){ - good working the same deleteButtons.forEach(deleteBtn -> deleteBtn.click());
-    //       deleteButton.click();
-     //  }
-        deleteButtons.forEach(deleteBtn -> deleteBtn.click());  // the same
+      for (WebElement deleteButton : deleteButtons){ //the same deleteButtons.forEach(deleteBtn -> deleteBtn.click());
+           deleteButton.click();
+       }
+
+        //ForEach method with lambda expression (->)
+       // deleteButtons.forEach(deleteBtn -> deleteBtn.click());  // the same, working
+
+      //  deleteButtons.forEach(anyVarName -> anyVarName.click()); // tha same
+
+        // run findElements for delete buttons again and see if it is 0
+        deleteButtons = driver.findElements(By.xpath("//Button[.='Delete']"));
+      if (deleteButtons.isEmpty()) {
+          System.out.println("PASS: All 50 button deleted succesfully");
+
+      }else {
+          System.out.println("FAIL: could not delete all 50 buttond");
+      }
+      driver.quit();
 
     }
 }
