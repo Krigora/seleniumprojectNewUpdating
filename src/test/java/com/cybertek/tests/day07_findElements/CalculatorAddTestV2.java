@@ -13,6 +13,10 @@ public class CalculatorAddTestV2 {
         String appUrl = "https://www.calculator.net";
         int num1 = 7;
         int num2 = 4;
+        /**
+         Homework: make selenium work for numbers more than 1 digit as well
+         int num1 = 128, num2 = 90; etc
+         */
         int expectedResult = num1 + num2;
         driver.get(appUrl);
 
