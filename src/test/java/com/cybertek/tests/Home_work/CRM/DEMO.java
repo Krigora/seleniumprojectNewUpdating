@@ -91,7 +91,7 @@ public class DEMO {
             System.out.println("PASS: Incorrect login");
 
         }else {
-            System.out.println("FAIL: Incorrect login");
+            System.out.println("FAIL: correct login");
         }
         driver.quit();
 
