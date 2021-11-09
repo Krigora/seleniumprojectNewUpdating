@@ -16,6 +16,7 @@ public class DEMO {
 
         String userNameHelpDesk3 = "helpdesk3@cybertekschool.com";
         String password = "UserUser";
+        String invalidPassword = "wrongs";
 
  //<input class="login-inp" type="text" name="USER_LOGIN" placeholder="Login" value="" maxlength="255">
         WebElement loginBar = driver.findElement(By.name("USER_LOGIN"));
@@ -69,9 +70,6 @@ public class DEMO {
         loginBar2.sendKeys(userNameHelpDesk3);
 
 
-        String invalidPassword = "wrongs";
-
-
         WebElement passwordBar2 = driver.findElement(By.name("USER_PASSWORD"));
         passwordBar2.clear();
         passwordBar2.sendKeys(invalidPassword);
@@ -81,6 +79,7 @@ public class DEMO {
         WebElement loginButton2 = driver.findElement(By.xpath("//input[@value='Log In']"));
         loginButton2.click();
 
+        System.out.println("Title: " + driver.getTitle());
 
 //<div class="errortext">Incorrect login or password<br></div>
         WebElement incorrectLoginPopur = driver.findElement(By.xpath("//div[@class='errortext']"));
@@ -94,5 +93,6 @@ public class DEMO {
         }else {
             System.out.println("FAIL: Incorrect login");
         }
+
     }
 }
