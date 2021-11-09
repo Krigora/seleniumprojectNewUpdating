@@ -93,6 +93,7 @@ public class DEMO {
         }else {
             System.out.println("FAIL: Incorrect login");
         }
+        driver.quit();
 
     }
 }
