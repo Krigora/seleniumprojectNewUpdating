@@ -18,11 +18,11 @@ public class DEMO {
         String password = "UserUser";
         String invalidPassword = "wrongs";
 
- //<input class="login-inp" type="text" name="USER_LOGIN" placeholder="Login" value="" maxlength="255">
+        //<input class="login-inp" type="text" name="USER_LOGIN" placeholder="Login" value="" maxlength="255">
         WebElement loginBar = driver.findElement(By.name("USER_LOGIN"));
         loginBar.sendKeys(userNameHelpDesk3);
 
-//<input class="login-inp" type="password" name="USER_PASSWORD" placeholder="Password" maxlength="255">
+        //<input class="login-inp" type="password" name="USER_PASSWORD" placeholder="Password" maxlength="255">
 
         WebElement passwordBar = driver.findElement(By.name("USER_PASSWORD"));
         passwordBar.sendKeys(password);
@@ -32,7 +32,7 @@ public class DEMO {
         loginButton.click();
 
         Thread.sleep(1000);
-//<title>(45) Portal</title>
+        //<title>(45) Portal</title>
         System.out.println("Title: " + driver.getTitle());
 
 

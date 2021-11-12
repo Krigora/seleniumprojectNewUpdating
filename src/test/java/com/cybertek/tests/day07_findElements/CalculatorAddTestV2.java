@@ -37,7 +37,7 @@ public class CalculatorAddTestV2 {
         WebElement result = driver.findElement(By.xpath("//div[@id='sciOutPut']"));
         System.out.println("Result = " + result.getText());
 
-        driver.quit();
+      //  driver.quit();
 
     }
 }
