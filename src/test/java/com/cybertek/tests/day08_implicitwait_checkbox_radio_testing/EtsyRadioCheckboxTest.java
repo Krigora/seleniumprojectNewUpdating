@@ -64,7 +64,9 @@ freeShip.click();
 
         Thread.sleep(2000);
 
-        WebElement result = driver.findElement(By.xpath("(//span[contains(text(),'results')])[1]"));
+        // By.xpath("//span[@class='wt-display-inline-flex-sm']/span[1]"));
+
+        WebElement result = driver.findElement(By.xpath("(//span[contains(text(),'results,')])[1]"));
         System.out.println("Result = " + result.getText());
 
 driver.quit();
