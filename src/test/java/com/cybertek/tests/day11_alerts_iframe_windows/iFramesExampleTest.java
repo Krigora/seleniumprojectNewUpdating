@@ -1,4 +1,4 @@
-package com.cybertek.tests;
+package com.cybertek.tests.day11_alerts_iframe_windows;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
