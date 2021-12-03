@@ -4,9 +4,12 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static com.cybertek.utils.WebDriverFactory.getDriver;
@@ -15,10 +18,8 @@ public class RegisstrationFormTest extends RegistrationFormTestBase{
 
     Faker faker = new Faker();
 
-
-
     @Test
-    public void formTest() {
+    public void formTest() throws InterruptedException {
         WebElement firstName = driver.findElement(By.name("firstname"));
         firstName.sendKeys(faker.name().firstName());
 
@@ -34,10 +35,41 @@ public class RegisstrationFormTest extends RegistrationFormTestBase{
         password.sendKeys(faker.internet().password());
 
         WebElement mobile = driver.findElement(By.name("phone"));
-        mobile.sendKeys(faker.phoneNumber().cellPhone());
+        mobile.sendKeys(faker.phoneNumber().cellPhone()
+        .replace("(", "")
+                .replace(")", "")
+                .replace(".", "-")
+                .replace(" ", "-"));
+
 
         WebElement maleRadio = driver.findElement(By.xpath("//*[@value='male']"));
         maleRadio.click();
+
+        WebElement birthday = driver.findElement(By.name("birthday"));
+        birthday.sendKeys("01/01/1990");
+
+        Select department = new Select(driver.findElement(By.name("department")));
+        department.selectByIndex(faker.number().numberBetween(1,9));
+
+        Select jobTitle = new Select(driver.findElement(By.name("job_title")));
+        jobTitle.selectByIndex(faker.number().numberBetween(1,8));
+
+
+        List<WebElement> languages = driver.findElements(By.xpath("//input[@type='checkbox']"));
+        for (WebElement eachLand : languages){
+            eachLand.click();
+        }
+
+        WebElement singUp = driver.findElement(By.id("wooden_spoon"));
+        singUp.click();
+
+        Thread.sleep(2000);
+
+        //verify "Well done!" message is displayed
+        WebElement heading = driver.findElement(By.className("alert-heading"));
+        Assert.assertEquals(heading.getText(), "Well done!");
+        Assert.assertTrue(heading.isDisplayed());
+
 
     }
 
