@@ -36,28 +36,24 @@ public class DemoQAMultipleWindowsTest {
      */
 
     @Test
-    public void newWindowTest() throws InterruptedException {
+    public void newWindowTest() {
         WebElement newWindowBtn = drive.findElement(By.cssSelector("#windowButton"));
         newWindowBtn.click();
-        // drive.close(); // close currently active windows
-        //  drive.quit(); // close all windows in same session
+
+        //driver.close(); // close currently active window
+        //driver.quit(); // closes all opened windows in same session
 
         Set<String> windowHandlesSet = drive.getWindowHandles();
-        String parentWindowHandle = drive.getWindowHandle(); // store cuttent window handle
+        String parentWindowHandle = drive.getWindowHandle(); //store current window handle
 
-        for (String windoHandle : windowHandlesSet) {
-            if (!windoHandle.equalsIgnoreCase(parentWindowHandle)) {
-            drive.switchTo().window(windoHandle);
+        for(String windowHandle : windowHandlesSet) {
+            if (!windowHandle.equals(parentWindowHandle)) {
+                drive.switchTo().window(windowHandle);
+            }
         }
-    }
 
         WebElement header = drive.findElement(By.cssSelector("#sampleHeading"));
         System.out.println("header text = " + header.getText());
-
-        Thread.sleep(200);
-
-        drive.close(); // close current windows
-
 
     }
 }
