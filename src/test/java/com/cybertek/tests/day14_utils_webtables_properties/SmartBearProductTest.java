@@ -23,6 +23,7 @@ http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx
 
     @Test
     public void verifyLinksAfterLogin(){
+        //perform login steps
         SmartBearUtils.loginToSmartBear(driver);
 
         // get all the links and print count and text
