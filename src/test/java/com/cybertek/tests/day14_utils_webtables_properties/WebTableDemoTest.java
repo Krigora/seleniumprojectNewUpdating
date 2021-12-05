@@ -111,8 +111,6 @@ public class WebTableDemoTest {
 
     }
 
-
-
     public String getCellData(int row, int col) {
         String xpathStr = "//table[@id='table1']/tbody/tr[" + row + "]/td[" + col + "]";
         return driver.findElement(By.xpath(xpathStr)).getText();
