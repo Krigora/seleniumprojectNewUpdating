@@ -24,6 +24,7 @@ public class WebDriverFactory {
 
     WebDriver driver = WebDriverFactory.getDriver("Chrome");
     and use driver as normal
+    Thank you, nice working with you
      */
 
     public static WebDriver getDriver(String browserType){
