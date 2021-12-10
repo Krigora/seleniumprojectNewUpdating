@@ -26,9 +26,7 @@ public class SmartBearTestBase {
     @AfterMethod
     public void tearDown() {
 
-
-
     }
 
-
 }
+

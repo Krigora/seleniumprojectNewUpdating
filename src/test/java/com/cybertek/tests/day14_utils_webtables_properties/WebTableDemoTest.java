@@ -108,17 +108,12 @@ public class WebTableDemoTest {
         //table[@id='table1']//td[.='Doe']/../td[4]
         //table[@id='table1']//td[.='Doe']/following-sibling::td[3]
 
-
     }
 
     public String getCellData(int row, int col) {
         String xpathStr = "//table[@id='table1']/tbody/tr[" + row + "]/td[" + col + "]";
         return driver.findElement(By.xpath(xpathStr)).getText();
 
-
     }
-
-
-
 
 }

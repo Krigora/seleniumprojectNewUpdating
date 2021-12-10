@@ -16,3 +16,4 @@ public class SystemPropertiesTest {
         System.out.println("java version = " + System.getProperty("java.version"));
     }
 }
+
