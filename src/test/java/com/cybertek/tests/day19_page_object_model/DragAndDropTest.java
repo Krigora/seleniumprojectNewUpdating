@@ -19,26 +19,26 @@ public class DragAndDropTest extends TestBase {
 
         WebElement fivak = driver.findElement(By.linkText("5000"));
         WebElement bankAmount = driver.findElement(By.id("amt7"));
-       // actions.dragAndDropBy(fivak, 793, 759);
+        // actions.dragAndDropBy(fivak, 793, 759);
 
         actions.dragAndDrop(fivak, bankAmount).perform();
     }
 
     @Test
     public void cargurusPriceSliderTest() {
-        driver.get(ConfigurationReader.getProperty("cargurus.url")+"/Cars/inventorylisting/viewDetailsFilterViewInventoryListing.action?sourceContext=carGurusHomePageModel&entitySelectingHelper.selectedEntity=d177&zip=22102");
+        driver.get(ConfigurationReader.getProperty("cargurus.url") + "/Cars/inventorylisting/viewDetailsFilterViewInventoryListing.action?sourceContext=carGurusHomePageModel&entitySelectingHelper.selectedEntity=d177&zip=22102");
 
         WebElement priceSlider = driver.findElement(By.xpath("(//button[@aria-valuemin='3000'])[1]"));
-        actions.clickAndHold(priceSlider)
-        .sendKeys(Keys.ARROW_RIGHT, Keys.ARROW_RIGHT, Keys.ARROW_RIGHT, Keys.ARROW_RIGHT).release().build().perform();
+
+        //   actions.clickAndHold(priceSlider).sendKeys(Keys.ARROW_RIGHT, Keys.ARROW_RIGHT, Keys.ARROW_RIGHT, Keys.ARROW_RIGHT).release().build().perform(); = TODO work too
 
 
-//        int x = priceSlider.getLocation().getX();
- //       int y = priceSlider.getLocation().getY();
+        int x = priceSlider.getLocation().getX();
+        int y = priceSlider.getLocation().getY();
 
- //       System.out.println("x = " + x);
-//        System.out.println("y = " + y);
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
 
-   //     actions.dragAndDropBy(priceSlider, x + 50, y).perform();
+        actions.dragAndDropBy(priceSlider, 100, 0).perform();
     }
 }
