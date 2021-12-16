@@ -20,6 +20,7 @@ public class officeUtils {
     public static int addProduct(String category,String product){
 
         getLink(category).click();
+        BrowserUtils.sleep(2);
         getLink(product).click();
 
         // getting the product's price
