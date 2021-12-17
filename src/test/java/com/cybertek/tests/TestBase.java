@@ -13,7 +13,7 @@ public abstract class TestBase {
     protected WebDriver driver;
     protected Faker faker = new Faker();
     protected Actions actions ;
-    protected WebDriverWait wait = new WebDriverWait(driver,20);
+ //   protected WebDriverWait wait = new WebDriverWait(driver,20);
 
     @BeforeMethod
     public void setUp(){

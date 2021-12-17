@@ -18,6 +18,7 @@ public class ExplicitWaitExamples extends TestBase {
     public void test1(){
 
         driver.get(ConfigurationReader.getProperty("dynamic.loading.url"));
+        WebDriverWait wait = new WebDriverWait(driver,20);
 
         WebElement triggerButton = driver.findElement(By.xpath("//button[.='Start']"));
 
@@ -43,6 +44,7 @@ public class ExplicitWaitExamples extends TestBase {
     public void test2(){
         // http://practice.cybertekschool.com/dynamic_controls
         driver.get(ConfigurationReader.getProperty("dynamic.control.url"));
+        WebDriverWait wait = new WebDriverWait(driver,20);
 
         WebElement enAbleDisAbleBtn = driver.findElement(By.xpath("(//button)[2]"));
         enAbleDisAbleBtn.click();
