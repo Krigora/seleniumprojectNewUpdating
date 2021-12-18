@@ -13,17 +13,17 @@ public abstract class TestBase {
     protected WebDriver driver;
     protected Faker faker = new Faker();
     protected Actions actions ;
- protected WebDriverWait wait;
+     protected WebDriverWait wait;
 
     @BeforeMethod
     public void setUp(){
         driver = Driver.getDriver();
         actions = new Actions(driver);
-        wait = new WebDriverWait(driver,20);
+      //  wait = new WebDriverWait(driver,20);
     }
     @AfterMethod
     public void TearDown(){
-        Driver.closeDriver();
+       // Driver.closeDriver();
     }
 
 
