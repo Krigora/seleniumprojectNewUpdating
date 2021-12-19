@@ -1,5 +1,6 @@
 package com.cybertek.tests.day23_fluentwait_testNg_overview;
 
+import com.cybertek.pages.Edmund.EdmundsCarDetailsPage;
 import com.cybertek.pages.Edmund.EdmundsHomePage;
 import com.cybertek.pages.Edmund.EdmundsNewCarPage;
 import com.cybertek.tests.TestBase;
@@ -27,6 +28,10 @@ public class EdmundsNewCarSearchTest extends TestBase {
         newCarPage.zipCode.sendKeys("60656");
         //click on Go
         newCarPage.goBtn.click();
+
+        EdmundsCarDetailsPage carDetailsPage = new EdmundsCarDetailsPage();
+        carDetailsPage.isCurrentPage();
+        System.out.println("MSRP RANGE = " + carDetailsPage.msrpRange.getText());
 
 
 
