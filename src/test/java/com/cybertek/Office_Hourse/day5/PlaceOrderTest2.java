@@ -1,12 +1,9 @@
 package com.cybertek.Office_Hourse.day5;
 
-import com.cybertek.pages.PlaceOrderPage;
+import com.cybertek.pages.OfficeHouse.PlaceOrderPage;
 import com.cybertek.tests.TestBase;
-import com.cybertek.utils.BrowserUtils;
 import com.cybertek.utils.ConfigurationReader;
-import com.cybertek.utils.Driver;
 import com.cybertek.utils.officeUtils;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class PlaceOrderTest2 extends TestBase{

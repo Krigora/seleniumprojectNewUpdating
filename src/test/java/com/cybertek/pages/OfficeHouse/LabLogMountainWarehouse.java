@@ -1,4 +1,4 @@
-package com.cybertek.pages;
+package com.cybertek.pages.OfficeHouse;
 
 import com.cybertek.tests.TestBase;
 import com.cybertek.utils.ConfigurationReader;

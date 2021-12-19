@@ -1,4 +1,4 @@
-package com.cybertek.pages;
+package com.cybertek.pages.OfficeHouse;
 
 import com.cybertek.utils.Driver;
 import com.github.javafaker.Faker;

@@ -1,11 +1,11 @@
-package com.cybertek.pages;
+package com.cybertek.pages.OfficeHouse;
 
 import com.cybertek.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AllOrderPage extends SmartBearDashBoardPage{
+public class AllOrderPage extends SmartBearDashBoardPage {
 
     // Do I have to put constructor?  NO
     // constructor is not inherited however, child class has to call Parent class constructor

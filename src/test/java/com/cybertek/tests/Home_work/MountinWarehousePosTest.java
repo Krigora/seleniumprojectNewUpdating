@@ -1,6 +1,6 @@
 package com.cybertek.tests.Home_work;
 
-import com.cybertek.pages.LabLogMountainWarehouse;
+import com.cybertek.pages.OfficeHouse.LabLogMountainWarehouse;
 import com.cybertek.tests.TestBase;
 import com.cybertek.utils.ConfigurationReader;
 import org.openqa.selenium.By;
