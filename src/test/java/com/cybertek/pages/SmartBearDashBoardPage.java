@@ -1,4 +1,4 @@
-package com.cybertek.pages.OfficeHouse;
+package com.cybertek.pages;
 
 import com.cybertek.utils.Driver;
 import org.openqa.selenium.By;
